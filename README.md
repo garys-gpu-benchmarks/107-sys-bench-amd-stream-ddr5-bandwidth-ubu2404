@@ -85,11 +85,11 @@ Three operator scripts from [`garys-gpu-benchmarks/gpu-bench-suite`](https://git
 
 ## 1. Overview
 
-Compiles official STREAM src/stream.c inline and runs build/stream with OMP_NUM_THREADS. num_threads: OpenMP workers. array_size: STREAM_ARRAY_SIZE. num_iterations: NTIMES. Sweep dimensions: numa_node, num_threads, thread_affinity, page_size, dtype, array_size, kernel_types, num_iterations.
+Compiles official STREAM src/stream.c inline and runs build/stream with OMP_NUM_THREADS. num_threads: OpenMP workers. array_size: STREAM_ARRAY_SIZE. num_iterations: NTIMES. Sweep dimensions: numa_node, num_threads, thread_affinity, array_size, num_iterations.
 
 ## 2. What It Validates
 
-- Validates Copy/Scale/Add/Triad Best Rate parse and triad/400 efficiency. numactl pinning is not applied
+- Validates Copy/Scale/Add/Triad Best Rate parse
 - #1: Best Copy bandwidth, GB/s (copy_bandwidth_gb_s); is present and physically sensible.
 - #2: Best Scale bandwidth, GB/s (scale_bandwidth_gb_s); is present and physically sensible.
 - #3: Best Add bandwidth, GB/s (add_bandwidth_gb_s); is present and physically sensible.
@@ -138,13 +138,13 @@ Compiles official STREAM src/stream.c inline and runs build/stream with OMP_NUM_
 ## 6. Installation
 
 ```bash
-Compile src/stream.c with gcc -O3 -fopenmp and run build/stream. Does not invoke numactl
+Compile src/stream.c with gcc -O3 -fopenmp and run build/stream
 ```
 
 ## 7. Running the Benchmark
 
 ```bash
-Compile src/stream.c with gcc -O3 -fopenmp and run build/stream. Does not invoke numactl
+Compile src/stream.c with gcc -O3 -fopenmp and run build/stream
 ```
 
 **Validating results separately:**
@@ -166,7 +166,7 @@ sample_index,status,copy_bandwidth_gb_s,scale_bandwidth_gb_s,add_bandwidth_gb_s,
 0,ok,180,175,190,185,
 
 ```bash
-Compile src/stream.c with gcc -O3 -fopenmp and run build/stream. Does not invoke numactl
+Compile src/stream.c with gcc -O3 -fopenmp and run build/stream
 ```
 
 ### `results/summary.json`
