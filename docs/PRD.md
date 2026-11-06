@@ -21,7 +21,7 @@ Compile official STREAM src/stream.c with gcc -O3 -fopenmp, run build/stream und
 Measure sustained CPU STREAM bandwidth
 
 ## Validation Objective
-Validates Copy/Scale/Add/Triad Best Rate parse
+Validates Copy, Scale, Add, and Triad DRAM bandwidth
 
 ## Workload Category
 Memory, Bandwidth & Data Movement
